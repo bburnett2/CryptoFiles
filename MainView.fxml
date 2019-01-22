@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewControl">
+   <children>
+      <GridPane layoutX="200.0" layoutY="241.0" prefHeight="900.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="204.14939880371094" minWidth="10.0" prefWidth="185.3734588623047" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="171.40789031982422" minWidth="10.0" prefWidth="113.62654113769531" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="221.38134765625" minWidth="10.0" prefWidth="147.75372314453125" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="203.5201416015625" minWidth="10.0" prefWidth="184.24627685546875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="135.1605987548828" minHeight="10.0" prefHeight="74.811279296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.1605987548828" minHeight="10.0" prefHeight="89.03749084472656" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="332.62729263305664" minHeight="10.0" prefHeight="105.26248168945312" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="332.62729263305664" minHeight="10.0" prefHeight="84.73751831054688" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="422.16259765625" minHeight="10.0" prefHeight="365.8499755859375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="211.41741943359375" minHeight="10.0" prefHeight="130.48748779296875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="106.16064453125" minHeight="10.0" prefHeight="60.51251220703125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="graphBt" mnemonicParsing="false" onAction="#analyis" text="Graph" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Button fx:id="encryptBt" mnemonicParsing="false" onAction="#encrypt" text="Encrypt" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Button fx:id="decryptBt" mnemonicParsing="false" onAction="#decrypt" text="Decrypt" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextArea fx:id="cipherTextTA" prefHeight="226.0" prefWidth="736.0" promptText="Cipher Text" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+            <TextArea fx:id="lengthGuessTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="plainTextTA" prefHeight="200.0" prefWidth="200.0" promptText="Pain Text" GridPane.columnSpan="2147483647" GridPane.rowIndex="5" />
+            <BarChart fx:id="frequencyBC" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label text="Key Word Length Guess:" GridPane.halignment="RIGHT" />
+            <TextArea fx:id="seriesNumTA" prefHeight="200.0" prefWidth="200.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+            <TextArea fx:id="keywordTA" prefHeight="0.0" prefWidth="204.0" GridPane.columnIndex="3" />
+            <Label text="Show series (i): " GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Label text="Key Word:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+            <Label text="I(xi) = " GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextArea fx:id="probabilityWordLengthTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="I(xi) = " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextArea fx:id="probabilityWordChoiceTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>
